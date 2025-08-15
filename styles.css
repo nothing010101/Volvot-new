@@ -49,6 +49,15 @@ body {
     font-weight: 800;
     margin-bottom: 20px;
     letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader-logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
 }
 
 .loading-animation {
@@ -102,6 +111,12 @@ body {
     font-weight: 800;
     font-size: 1.5rem;
     color: #333;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
 }
 
 .logo-icon {
@@ -180,13 +195,28 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.1;
+    opacity: 0.8;
+}
+
+.hero-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://raw.githubusercontent.com/nothing010101/volvot/main/1755254733940.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: 0;
 }
 
 .geometric-shape {
     position: absolute;
     background: linear-gradient(45deg, #667eea, #764ba2);
     animation: float 6s ease-in-out infinite;
+    z-index: 1;
 }
 
 .shape-1 {
@@ -196,6 +226,7 @@ body {
     top: 20%;
     right: 10%;
     animation-delay: 0s;
+    opacity: 0.1;
 }
 
 .shape-2 {
@@ -205,6 +236,7 @@ body {
     top: 60%;
     right: 20%;
     animation-delay: 2s;
+    opacity: 0.1;
 }
 
 .shape-3 {
@@ -214,6 +246,7 @@ body {
     top: 40%;
     right: 50%;
     animation-delay: 4s;
+    opacity: 0.1;
 }
 
 @keyframes float {
@@ -435,6 +468,50 @@ body {
     opacity: 0.8;
 }
 
+/* Marketing Section */
+.marketing-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.marketing-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.marketing-text h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #2d3748;
+}
+
+.marketing-text p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.marketing-visual {
+    text-align: center;
+}
+
+.marketing-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.marketing-image:hover {
+    transform: translateY(-10px);
+}
+
 /* Innovation Hub */
 .innovation-hub {
     padding: 100px 0;
@@ -642,6 +719,12 @@ body {
     margin-bottom: 20px;
 }
 
+.footer-logo-img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
 .footer-copyright {
     color: #a0aec0;
     font-size: 0.9rem;
@@ -738,7 +821,7 @@ body {
         font-size: 2rem;
     }
     
-    .hub-content {
+    .hub-content, .marketing-content {
         grid-template-columns: 1fr;
         text-align: center;
     }
